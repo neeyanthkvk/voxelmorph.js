@@ -1,0 +1,36 @@
+{
+  "name": "Voxelmorph",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "license": "Apache-2.0",
+  "private": true,
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^0.14.1",
+    "@tensorflow/tfjs-vis": "^0.3.0",
+    "arraybuffer-to-buffer": "0.0.5",
+    "fs": "0.0.1-security",
+    "nifti-js": "^1.0.1",
+    "par": "^0.3.0"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production parcel build index.html --no-minify --public-url ./",
+    "watch": "./serve.sh",
+    "link-local": "yalc link",
+    "postinstall": "yarn upgrade --pattern @tensorflow"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "clang-format": "^1.2.4",
+    "cross-env": "^5.2.0",
+    "http-server": "^0.10.0",
+    "parcel-bundler": "~1.10.3",
+    "yalc": "~1.0.0-pre.22"
+  }
+}
